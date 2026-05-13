@@ -152,6 +152,7 @@ LLM에서 멀티 에이전트로 점진적으로 발전시킨 학습용 스크�
 ## 📚 더 읽을거리
 
 - [docs/architecture.md](docs/architecture.md) — 전체 흐름 · 코드 읽는 순서 · 각 에이전트가 실행될 때 무엇을 읽는지 상세 정리
+- [docs/messages.md](docs/messages.md) — LangChain 메시지 타입(`SystemMessage`/`HumanMessage`/`AIMessage`/`ToolMessage`) 완전 정리. 언제·왜·어떻게 쓰는지, `tool_calls` ↔ `ToolMessage` 매칭 규칙
 
 ---
 

@@ -3,6 +3,8 @@
 이 문서는 `personal-assistant-agent`의 동작 원리, 코드를 어떤 순서로 읽으면 좋은지,
 그리고 각 에이전트가 실행될 때 어떤 도구 · 어떤 정보를 참조하는지를 정리한다.
 
+> 메시지 타입(`HumanMessage`, `SystemMessage`, `AIMessage`, `ToolMessage`)이 헷갈리면 먼저 [messages.md](messages.md)를 읽고 오면 이해가 훨씬 빠르다.
+
 ---
 
 ## 1. 한눈에 보는 전체 흐름
@@ -19,7 +21,7 @@
                 ▼
    ┌──────────────────────────┐
    │   supervisor_node        │  ── _llm_with_handoff (bind_tools)
-   │   (LLM이 라우팅 결정)      │     · _SUPERVISOR_PROMPT 읽음
+   │   (LLM이 라우팅 결정)       │     · _SUPERVISOR_PROMPT 읽음
    │                          │     · 사용 가능한 도구: transfer_to_note_agent,
    │                          │                          transfer_to_search_agent
    └────────────┬─────────────┘
